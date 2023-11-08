@@ -5,7 +5,8 @@ import './App.css';
 import Header from './Components/Header';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
-
+import HomePage from './pages/HomePage';
+import Ejemplo1 from "./pages/Ejemplo1"
 function App() { 
     return (
       <div className="App">
@@ -13,7 +14,8 @@ function App() {
           <BrowserRouter>
             <Nav/>
             <Routes>
-              {/*<Route path='/' element={nombredelcomponente}></Route>*/}
+              <Route path='/' element={<HomePage/>}></Route>
+              <Route path='/ejemplo1' element={<Ejemplo1/>}></Route>
             </Routes>
             </BrowserRouter>
           <Footer/>
