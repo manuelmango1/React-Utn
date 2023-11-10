@@ -29,8 +29,36 @@ function EjemploProps3({titulo, subtitulo, cuerpo}){
     )
 }
 
+function EjemploProps4(props){
+    //Cuando se produzca el evento onChange en el input
+    //ejecuto la funcion anonima que llama a la funcion
+    //que enviamos en la prop 'cambiarValor'
+    
+    
+    return(
+        <label htmlFor="">Ver en consola: <input type="text" onChange={(e) =>
+        props.cambiarValor(e.target.value)}/></label>
+    )
+}
+
+function EjemploProps5(props){
+//defino la funcion que va a manejar el evento del click
+    const handleClick = e => {
+//valido que esten pasando as props que necesito
+//si se da la condicion o la pasaron > va a mostrar, me clickeaste, si no, no muestra nada.
+//porque en este caso el control esta dentro del componente
+        if(props.eventoClick){
+            props.eventoClick("Me Clickeaste")
+        }
+    }
+    return(
+        <p><button onClick={handleClick}>Clickeame</button></p>
+    )
+}
 export{
     EjemploProps1,
     EjemploProps2,
-    EjemploProps3
+    EjemploProps3,
+    EjemploProps4,
+    EjemploProps5
 }

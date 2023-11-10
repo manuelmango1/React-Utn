@@ -1,0 +1,28 @@
+.buttonGroup{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.success{
+    border-radius: 10%;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    font-size:40px ;
+
+}
+
+.error{
+    border-radius: 10%;
+    padding: 20px;
+    background-color: red;
+    font-size: 40px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
