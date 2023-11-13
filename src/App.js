@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage';
 import Ejemplo1 from "./pages/Ejemplo1"
 import Ejemplo2 from './pages/Ejemplo2';
 import Mapa from './pages/Mapa';
+import Json from './pages/Json';
+import Api from './pages/Api';
 function App() { 
     return (
       <div className="App">
@@ -20,6 +22,8 @@ function App() {
               <Route path='/ejemplo1' element={<Ejemplo1/>}></Route>
               <Route path='/ejemplo2' element={<Ejemplo2/>}></Route>
               <Route path='/ejemplo3' element={<Mapa/>}></Route>
+              <Route path='/json' element={<Json/>}></Route>
+              <Route path='/api' element={<Api/>}></Route>
             </Routes>
             </BrowserRouter>
           <Footer/>
