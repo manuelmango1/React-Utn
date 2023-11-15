@@ -10,7 +10,7 @@ function Api(props){
     useEffect(()=>{
         const cargarDatos = async() =>{
             setCargando(true);
-            const res = (await fetch('https://rickandmortyapi.com/api/character')).json();
+            const res = await (await fetch('https://rickandmortyapi.com/api/character')).json();
             setPersonajes(res.results);
             setCargando(false)
         }
@@ -23,23 +23,23 @@ function Api(props){
         <>
         <h2>Datos API</h2>
     {cargando ? <p>Cargando Datos....</p> :(
-       <div className="personajes">
-
-            <div className="personaje">
-                <h4>personaje</h4>
-                <div className="ficha">
+    <div className="personajes">
+{personajes.map(personaje=> (
+        <div className="personaje" key={personaje.id}>
+            <h4>{personaje.name}</h4>
+            <div className="ficha">
                 <div className="foto">
-                    <img src="https://fakeimg.pl/150x150/a19494/000000?text=FOTO&font=museo" alt="FOTO"/>
+                    <img src={personaje.image} alt="FOTO"/>
                 </div>
                 <div className="datos">
-                    <h6>Especie: Humano o No</h6>
-                    <h6>Vivo: SI o NO</h6>
+                    <h6>Especie: {personaje.species === 'Human' ? 'Humano' : personaje.species}</h6>
+                <h6>Vivo: {personaje.status === 'Alive' ? 'Si' : 'No'}</h6>
                 </div>
             </div>
 
-            </div>
-
-       </div>
+        </div>
+        ))}
+    </div>
     )} {/*Termina el operador ternario de linea 25 */}
        </>
     )
