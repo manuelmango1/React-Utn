@@ -1,6 +1,14 @@
+
+h2{
+    text-align: center;
+    color: black;
+    font-style: italic;
+
+}
 .personajes{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
 }
 
 .personaje{
@@ -9,17 +17,21 @@
     border-radius: 5px;
     margin: 8px;
     max-width: 300px;
+    background-color: #2aa3fc;
+
 }
 
 .personaje h4,
 .personaje h6{
     margin: 0;
+    color: white;
 }
 
 .personaje .ficha{
     display: flex;
     justify-content: flex-start;
     margin: 16px 0 0;
+    color: aliceblue;
 }
 
 .personaje .ficha .foto{

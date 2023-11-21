@@ -1,4 +1,5 @@
 import react from "react";
+import "../css/props.css"
 
 function EjemploProps1(props){
     return(

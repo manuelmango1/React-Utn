@@ -25,7 +25,7 @@ function App() {
               <Route path='/json' element={<Json/>}></Route>
               <Route path='/api' element={<Api/>}></Route>
             </Routes>
-            </BrowserRouter>s
+            </BrowserRouter>
           <Footer/>
       </div>
     );

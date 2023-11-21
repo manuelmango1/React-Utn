@@ -1,9 +1,10 @@
 import React from "react";
+import "../css/header.css"
 
 function Header(props){
     return(      
     <header>
-        <h1>Trabajamos con React</h1>
+        <h1>REACT JS</h1>
     </header>    
     
     

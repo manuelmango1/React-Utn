@@ -1,6 +1,8 @@
 body{
   margin: 0;
   padding: 0;
+  background-image:url(../public/images/da2500bb898d5d62da7910ffbf2c1c40.jpg) ;
+  background-size: cover;
 }
 header{
   background-color: #1e70da;
@@ -13,9 +15,10 @@ header h1{
 }
 
 footer{
-  background-color: #b0b1b3;
+  background-color: #2aa3fc;
   text-align: center;
   padding: 10px 0;
+  color: white;
 }
 
 nav{
